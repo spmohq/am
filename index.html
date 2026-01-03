@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aff Mktg</title>
+    <!-- Favicon as requested -->
+    <link rel="icon" type="image/x-icon" href="spm.ico">
+    
+    <style>
+        /* RESET & BASE STYLES */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            /* The specific hot pink from the image */
+            background-color: #f506b3; 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            padding-top: 60px; /* Space for top elements */
+        }
+
+        /* SHARE BUTTON (Top Right) */
+        .share-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            border: none;
+            /* subtle shadow for depth */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+            transition: transform 0.2s;
+        }
+
+        .share-button:active {
+            transform: scale(0.95);
+        }
+
+        .share-button svg {
+            width: 20px;
+            height: 20px;
+            fill: #333;
+        }
+
+        /* PROFILE SECTION */
+        .profile-container {
+            text-align: center;
+            margin-bottom: 30px;
+            z-index: 2;
+        }
+
+        .profile-pic {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover; /* Ensures image doesn't distort */
+            border: 2px solid transparent; /* Optional cleaner edge */
+            margin-bottom: 10px;
+            background-color: #ddd; /* Fallback color if image missing */
+        }
+
+        .profile-name {
+            color: white;
+            font-weight: 800; /* Extra bold */
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+        }
+
+        /* LINKS / BUTTONS SECTION */
+        .links-container {
+            width: 100%;
+            max-width: 450px; /* Limits width on desktop */
+            display: flex;
+            flex-direction: column;
+            gap: 20px; /* Space between buttons */
+            padding: 0 20px; /* Side padding for mobile */
+        }
+
+        .link-btn {
+            display: block;
+            background-color: white;
+            color: #222;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-align: center;
+            padding: 18px;
+            border-radius: 50px; /* Pill shape */
+            position: relative;
+            
+            /* THE DROP SHADOW EFFECT */
+            /* This creates the hard black shadow offset */
+            box-shadow: 6px 7px 0px #000000; 
+            
+            transition: transform 0.1s, box-shadow 0.1s;
+            border: 1px solid rgba(0,0,0,0.05); /* Very subtle border */
+        }
+
+        /* Hover/Click Interaction */
+        .link-btn:active {
+            transform: translate(2px, 2px);
+            box-shadow: 4px 5px 0px #000000;
+        }
+
+        .emoji {
+            margin-left: 5px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Top Right Share Button -->
+    <div class="share-button" title="Share">
+        <!-- SVG for the 'Share/Upload' icon -->
+        <svg viewBox="0 0 24 24">
+            <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.66 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"/>
+        </svg>
+    </div>
+
+    <!-- Profile Info -->
+    <div class="profile-container">
+        <!-- Profile Image -->
+        <img src="name.jpg" class="profile-pic">
+        
+        <!-- Name and Flags -->
+        <div class="profile-name">
+            Siva Prasad Mukherjee
+        </div>
+    </div>
+
+    <!-- Link Buttons -->
+    <div class="links-container">
+
+        <a href="1am.html" class="link-btn" target="_blank">
+            Step #1 <span class="emoji">❤️</span>
+        </a>
+        
+        <a href="2am.html" class="link-btn" target="_blank">
+            Step #2 <span class="emoji">❤️</span>
+        </a>
+        
+        <a href="3am.html" class="link-btn" target="_blank">
+            Step #3 <span class="emoji">❤️</span>
+        </a>
+
+        <a href="4am.html" class="link-btn" target="_blank">
+            Step #4 <span class="emoji">❤️</span>
+        </a>
+
+        <a href="5am.html" class="link-btn" target="_blank">
+            Step #5 <span class="emoji">❤️</span>
+        </a>
+
+    </div>
+
+</body>
+</html>
